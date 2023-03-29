@@ -11,5 +11,12 @@ public class StringTest {
         assertThat(actual).isEqualTo("adc");
     }
 
-    // changmok
+    @Test
+    void split(){
+        String[] actual = "1,2".split(",");
+        assertThat(actual).contains("1", "2");
+
+        String[] actual2 = "1".split(",");
+        assertThat(actual2).containsExactly("1");
+    }
 }
